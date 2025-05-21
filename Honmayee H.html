@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honmayee – Youngest Website Builder</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #001F3F, #007BFF);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 30px;
+    }
+
+    img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px white;
+    }
+
+    .intro, .details {
+      margin-top: 30px;
+      display: none;
+      padding: 0 20px;
+      animation: fadeIn 1s forwards;
+    }
+
+    .visible {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .title {
+      font-size: 26px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .typewriter {
+      display: inline-block;
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+      font-size: 18px;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: white; }
+    }
+
+    .more-buttons {
+      margin-top: 25px;
+    }
+
+    .more-buttons button {
+      background-color: white;
+      color: #001F3F;
+      border: none;
+      padding: 10px 18px;
+      margin: 10px 8px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .more-buttons button:hover {
+      background-color: #001F3F;
+      color: white;
+    }
+  </style>
+</head>
+<body onload="startUp()">
+
+  <!-- 🎵 Background Music -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="5602dbcf-11ef-42b8-8a77-8d13b9698206.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <img src="28b8d156-21dd-44b7-a8f2-239ff9851fe2.jpg" alt="Honmayee" id="profilePic" onclick="showDetails()" />
+
+    <div class="intro visible" id="intro">
+      <div class="title">Hi, I'm Honmayee!</div>
+      <div class="typewriter">On a mission to become the youngest website builder!</div>
+    </div>
+
+    <div class="details" id="details">
+      <div class="title">🚀 Full About Me</div>
+      <div class="description">
+        I absolutely love building cool, colourful, high-tech websites.<br>
+        I started this journey because I believe kids can achieve big dreams too.<br><br>
+        Every website I make is a step closer to breaking a world record –<br>
+        I want to be the youngest person to build 20+ amazing websites before turning 13!<br><br>
+        I design, write, and code all by myself with creativity and passion.<br>
+        Thank you for visiting one of my record-breaking websites!
+      </div>
+
+      <div class="more-buttons">
+        <button onclick="window.open('7d7b920d-18bd-4de1-8a5d-f20e6f5d49bd.html')">My Portfolio</button>
+        <button onclick="window.open('10e68c92-24f0-42d6-84b2-ecdc95bb9b55.html')">My Blog</button>
+        <button onclick="window.open('5236a79c-dae7-4f28-9561-b2704b1f0a14.html')">My Projects</button>
+
+      </div>
+    </div>
+  </header>
+
+  <script>
+    function startUp() {
+      alert("🎉 Welcome to one of my world-record-breaking websites!");
+    }
+
+    function showDetails() {
+      document.getElementById('details').classList.add('visible');
+    }
+  </script>
+</body>
+</html>
